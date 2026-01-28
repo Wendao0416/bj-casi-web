@@ -19,6 +19,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
              src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbGl4bC1E4PmFYWu1fCQHvXw_ilt5AAJYC2sbyYbJRyjTJ-4wRyZtAQADAgADeQADOAQ"
              alt="MOCVD Equipment"
              className="w-full h-full object-cover object-center"
+             loading="eager"
+             fetchPriority="high"
+             decoding="async"
+             width="1920"
+             height="1080"
           />
           {/* Optimized gradient: Solid on left for text, fading gently to reveal image on right */}
           <div className="absolute inset-0 bg-gradient-to-r from-stone-100 via-stone-100/85 to-stone-100/20"></div>

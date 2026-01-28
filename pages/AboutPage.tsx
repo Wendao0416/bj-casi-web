@@ -3,7 +3,7 @@ import React from 'react';
 export const AboutPage: React.FC = () => {
   return (
     <div className="w-full pt-20 bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
         
         {/* Header */}
         <div className="mb-24 animate-fade-in-up">

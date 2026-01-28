@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 export const ContactPage: React.FC = () => {
   return (
     <div className="w-full pt-20 bg-stone-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-32 grid grid-cols-1 md:grid-cols-2 gap-16">
         
         {/* Info Column */}
         <div className="flex flex-col justify-center">

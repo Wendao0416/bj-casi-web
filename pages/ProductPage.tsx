@@ -1,39 +1,11 @@
-import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Check } from 'lucide-react';
 
 export const ProductPage: React.FC = () => {
-
-  // Function to handle file download
-  const handleDownloadReport = () => {
-    // 1. Define the file URL. 
-    // In a real project, this would be '/assets/pdf/ZZW20250270_Report.pdf' or a cloud storage URL.
-    // For now, we'll show a message that the file is not available yet.
-    const fileUrl = '/assets/pdf/ZZW20250270_Report.pdf'; 
-    
-    // 2. Create a temporary anchor element
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    
-    // 3. Set the download filename
-    link.download = 'CASI_ZZW20250270_Full_Report.pdf'; // The name the user will see
-    
-    // 4. Trigger the download
-    document.body.appendChild(link);
-    
-    // Try to download, if file doesn't exist, show a message
-    try {
-      link.click();
-    } catch (error) {
-      alert("文件暂未上传，请联系我们获取完整检测报告。");
-    }
-
-    // 5. Cleanup
-    document.body.removeChild(link);
-  };
-
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <div className="w-full pt-20 bg-stone-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-32">
         
         {/* 1. Page Header - Animated */}
         <div className="mb-12 text-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0ms' }}>
@@ -49,7 +21,7 @@ export const ProductPage: React.FC = () => {
         </div>
 
         {/* 2. Hero Section - Animated */}
-        <div className="relative w-full rounded-3xl bg-white border border-stone-200 p-8 md:p-12 lg:p-12 mb-24 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)] overflow-hidden opacity-0 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
+        <div className="relative w-full bg-white border border-stone-200 p-8 md:p-12 lg:p-12 mb-24 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05)] overflow-hidden opacity-0 animate-fade-in-up" style={{ animationDelay: '150ms' }}>
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
                 
                 {/* Left: Text Info */}
@@ -87,19 +59,6 @@ export const ProductPage: React.FC = () => {
                             <div className="text-xl text-stone-900 font-normal">2 - 8 <span className="text-sm text-stone-500">inch</span></div>
                          </div>
                     </div>
-
-                    <div className="pt-4">
-                       <button 
-                          onClick={handleDownloadReport}
-                          className="group inline-flex items-center gap-2 text-sm font-mono text-stone-500 hover:text-stone-900 transition-colors duration-300"
-                       >
-                          <span className="relative">
-                             下载完整检测报告
-                             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-stone-900 transition-all duration-300 group-hover:w-full"></span>
-                          </span>
-                          <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1"/>
-                       </button>
-                    </div>
                 </div>
 
                 {/* Right: Image Display */}
@@ -116,13 +75,24 @@ export const ProductPage: React.FC = () => {
                         <div className="absolute bottom-0 left-0 w-8 h-8 border-l-2 border-b-2 border-stone-300 rounded-bl-lg"></div>
                         <div className="absolute bottom-0 right-0 w-8 h-8 border-r-2 border-b-2 border-stone-300 rounded-br-lg"></div>
 
+                        {/* Loading Placeholder */}
+                        {!imageLoaded && (
+                            <div className="absolute inset-0 flex items-center justify-center z-5">
+                                <div className="w-16 h-16 border-4 border-stone-200 border-t-stone-400 rounded-full animate-spin"></div>
+                            </div>
+                        )}
+
                         {/* Product Image */}
                         <img 
                             src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbWl4bN1Ua9TYS9nIGZ0--s1s46-gAAJZC2sbyYbJR5-595Z8k5AQAQADAgADdwADOAQ"
                             alt="ZY316 MOCVD Machine"
                             decoding="async"
+                            loading="eager"
                             fetchPriority="high"
-                            className="w-full h-full object-contain relative z-10 mix-blend-multiply contrast-[1.05] transition-transform duration-700 ease-out-expo group-hover:scale-105"
+                            width="800"
+                            height="600"
+                            onLoad={() => setImageLoaded(true)}
+                            className={`w-full h-full object-contain relative z-10 mix-blend-multiply contrast-[1.05] transition-opacity duration-500 ease-out-expo group-hover:scale-105 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         />
                     </div>
                     {/* Caption */}
@@ -212,7 +182,7 @@ export const ProductPage: React.FC = () => {
                     className: 'bg-white border-stone-200 hover:border-brand-300'
                   }
                 ].map((item, i) => (
-                  <div key={i} className={`p-6 rounded-xl border ${item.className} flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-out-expo group`}>
+                  <div key={i} className={`p-6 border ${item.className} flex flex-col hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ease-out-expo group`}>
                       <h3 className="font-heading font-medium text-lg mb-4 text-stone-900 group-hover:text-brand-700 transition-colors">{item.category}</h3>
                       <div className="flex flex-wrap gap-2">
                         {item.materials.map((m, j) => (
@@ -227,10 +197,18 @@ export const ProductPage: React.FC = () => {
         </div>
 
         {/* 6. Dashboard Widget Style - Performance - Animated */}
-        <div className="w-full bg-stone-900 text-stone-50 rounded-2xl p-8 md:p-12 relative overflow-hidden min-h-[500px] opacity-0 animate-fade-in-up" style={{ animationDelay: '750ms' }}>
+        <div className="w-full bg-stone-900 text-stone-50 p-8 md:p-12 relative overflow-hidden min-h-[500px] opacity-0 animate-fade-in-up" style={{ animationDelay: '750ms' }}>
               {/* Background Image for context */}
               <div className="absolute inset-0 z-0">
-                  <img src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbml4ci57CPuQklXF4uWm8LrVRM7tAAJbC2sbyYbJR1yBux6E8D2CAQADAgADdwADOAQ" className="w-full h-full object-cover opacity-20 mix-blend-luminosity transform scale-100 hover:scale-105 transition-transform duration-[2000ms] ease-out-expo" alt="Tech Background" />
+                  <img 
+                    src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbml4ci57CPuQklXF4uWm8LrVRM7tAAJbC2sbyYbJR1yBux6E8D2CAQADAgADdwADOAQ" 
+                    className="w-full h-full object-cover opacity-20 mix-blend-luminosity transform scale-100 hover:scale-105 transition-transform duration-[2000ms] ease-out-expo" 
+                    alt="Tech Background"
+                    loading="lazy"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
+                  />
               </div>
 
               {/* Abstract decorative BG */}
@@ -251,7 +229,7 @@ export const ProductPage: React.FC = () => {
                   </div>
 
                   {/* Dark Mode Data Table */}
-                  <div className="bg-white/5 border border-white/10 rounded-xl overflow-hidden backdrop-blur-sm hover:bg-white/10 transition-colors duration-500">
+                  <div className="bg-white/5 border border-white/10 overflow-hidden backdrop-blur-sm hover:bg-white/10 transition-colors duration-500">
                       <div className="grid grid-cols-1 md:grid-cols-2">
                           {[
                               { k: 'Wafer size', v: '6", 8"' },

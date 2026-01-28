@@ -177,10 +177,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
       {/* 3. ABOUT US (关于我们) */}
       <section className="py-32 px-6 md:px-12 border-b border-stone-200 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
-          <div className="md:col-span-5">
-            <h2 className="text-4xl tracking-tight leading-tight text-stone-900 mb-8 font-heading font-light">
-              关于我们<br/>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-stretch">
+          <div className="md:col-span-7 flex flex-col h-full">
+            <h2 className="flex flex-wrap items-baseline gap-x-4 gap-y-2 text-4xl tracking-tight leading-tight text-stone-900 mb-8 font-heading font-light">
+              <span>关于我们</span>
               <span className="text-stone-400">About Us</span>
             </h2>
             <div className="space-y-6 text-stone-600 leading-relaxed font-light">
@@ -194,7 +194,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Secondary Button - Updated Style */}
             <button 
               onClick={() => onNavigate(Page.ABOUT)}
-              className="mt-8 group inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors duration-300"
+              className="mt-auto pt-8 group inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors duration-300"
             >
               <span className="relative">
                 了解我们 Learn More
@@ -204,19 +204,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </button>
           </div>
 
-          <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6">
-             <div className="p-6 bg-stone-50 border border-stone-100 hover:border-stone-300 transition-colors group">
-                <div className="text-4xl font-light text-stone-900 mb-2 group-hover:text-brand-600">30+</div>
+          <div className="md:col-span-5 flex flex-col justify-end h-full">
+            <div className="flex flex-col">
+             <div className="p-4 bg-stone-50 border border-stone-100 hover:border-stone-300 transition-colors group flex flex-row items-center gap-4">
+                <div className="text-3xl font-light text-stone-900 group-hover:text-brand-600 shrink-0">30+</div>
                 <div className="text-xs font-mono text-stone-500 uppercase tracking-widest">年行业经验</div>
              </div>
-             <div className="p-6 bg-stone-50 border border-stone-100 hover:border-stone-300 transition-colors group">
-                <div className="text-4xl font-light text-stone-900 mb-2 group-hover:text-brand-600">50+</div>
+             <div className="h-px bg-stone-200/80 my-4"></div>
+             <div className="p-4 bg-stone-50 border border-stone-100 hover:border-stone-300 transition-colors group flex flex-row items-center gap-4">
+                <div className="text-3xl font-light text-stone-900 group-hover:text-brand-600 shrink-0">50+</div>
                 <div className="text-xs font-mono text-stone-500 uppercase tracking-widest">核心专利</div>
              </div>
-             <div className="p-6 bg-stone-50 border border-stone-100 hover:border-stone-300 transition-colors group">
-                <div className="text-4xl font-light text-stone-900 mb-2 group-hover:text-brand-600">24/7</div>
+             <div className="h-px bg-stone-200/80 my-4"></div>
+             <div className="p-4 bg-stone-50 border border-stone-100 hover:border-stone-300 transition-colors group flex flex-row items-center gap-4">
+                <div className="text-3xl font-light text-stone-900 group-hover:text-brand-600 shrink-0">24/7</div>
                 <div className="text-xs font-mono text-stone-500 uppercase tracking-widest">全球技术支持</div>
              </div>
+            </div>
           </div>
         </div>
       </section>

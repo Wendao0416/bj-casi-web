@@ -13,10 +13,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="w-8 h-8 bg-white text-stone-900 rounded-full flex items-center justify-center font-bold text-xs mb-6">
             CA
           </div>
-          <p className="text-xs text-stone-500 leading-loose max-w-sm">
+          <p className="text-xs text-stone-400 leading-loose max-w-sm">
             北京中科重仪半导体科技有限公司<br/>
             Beijing CASI Semiconductor Technology Co., Ltd.<br/>
-            Building the infrastructure for compound semiconductor innovation.
+            <span className="text-stone-500">Building the infrastructure for compound semiconductor innovation.</span>
           </p>
         </div>
         
@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         <div>
            <h5 className="text-white text-xs uppercase tracking-widest mb-6">联系方式 Contact</h5>
-           <ul className="space-y-4 text-xs font-mono text-stone-500">
+           <ul className="space-y-4 text-xs font-mono text-stone-400">
              <li>北京市顺义区南法信HICOOL产业园</li>
              <li>zhanghao@semi-casi.com</li>
              <li>189 1159 2876</li>
@@ -40,13 +40,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      <div className="border-t border-stone-800 pt-12 text-[10px] text-stone-600 flex flex-col md:flex-row justify-between">
+      <div className="border-t border-stone-800 pt-12 text-[10px] text-stone-500 flex flex-col md:flex-row justify-between">
          <p>© 2025 Beijing CASI Semiconductor Technology Co., Ltd. All rights reserved.</p>
          <a 
            href="https://beian.miit.gov.cn/#/Integrated/index" 
            target="_blank" 
            rel="noopener noreferrer"
-           className="mt-2 md:mt-0 hover:text-stone-400 transition-colors"
+           className="mt-2 md:mt-0 hover:text-stone-300 transition-colors"
          >
            京ICP备2023009551号
          </a>

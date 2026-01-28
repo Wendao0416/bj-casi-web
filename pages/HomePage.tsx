@@ -16,11 +16,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-<<<<<<< HEAD
              src="/images/hero/hero-mocvd-equipment.webp"
-=======
-             src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbGl4bC1E4PmFYWu1fCQHvXw_ilt5AAJYC2sbyYbJRyjTJ-4wRyZtAQADAgADeQADOAQ"
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
              alt="MOCVD Equipment"
              className="w-full h-full object-cover object-center"
              loading="eager"
@@ -64,7 +60,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </p>
 
               <div className="flex flex-wrap gap-6 items-center opacity-0 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-<<<<<<< HEAD
                 {/* Primary Button - Glass morphism style inspired by Launch App button */}
                 <button 
                   onClick={() => onNavigate(Page.PRODUCT)}
@@ -79,24 +74,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     设备详情
                   </span>
                   <Settings size={16} className="text-stone-400 group-hover:text-brand-600 transition-colors duration-500" />
-=======
-                {/* Primary Button - Synced with Navbar Contact Button Style */}
-                <button 
-                  onClick={() => onNavigate(Page.PRODUCT)}
-                  className="group relative flex items-center justify-center overflow-hidden rounded-full p-[1px] transition-all duration-300 hover:shadow-[0_0_15px_rgba(28,25,23,0.2)]"
-                >
-                  {/* Spinning Border Beam (Visible on Hover) */}
-                  <span className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#ffffff_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
-                  
-                  {/* Default Static Border (Hidden on Hover) */}
-                  <span className="absolute inset-0 rounded-full bg-stone-800 transition-opacity duration-300 group-hover:opacity-0"></span>
-
-                  {/* Inner Content */}
-                  <span className="relative flex h-full w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-stone-800 to-stone-950 px-8 py-3 text-sm font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.3)] transition-colors duration-300">
-                    <span className="tracking-tight">设备详情</span>
-                    <Settings size={16} className="text-stone-400 group-hover:text-white transition-colors" />
-                  </span>
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                 </button>
 
                 {/* Secondary Button - Updated Style */}
@@ -132,55 +109,33 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
       {/* 2. DUAL CARDS SECTION */}
       <section className="w-full bg-stone-950 border-t border-stone-800">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-=======
-        <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
           
           {/* Card 1: Products */}
           <div 
             onClick={() => onNavigate(Page.PRODUCT)}
-<<<<<<< HEAD
             className="group relative overflow-hidden rounded-xl bg-stone-900/50 border border-white/10 p-8 md:p-10 backdrop-blur-md hover:bg-stone-900/80 transition-all duration-500 cursor-pointer flex flex-col"
-=======
-            className="group relative overflow-hidden rounded-xl bg-stone-900/50 border border-white/10 p-8 md:p-10 backdrop-blur-md hover:bg-stone-900/80 transition-all duration-500 cursor-pointer"
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
           >
             <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10 flex flex-col h-full gap-6">
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center border border-white/10 text-white group-hover:scale-110 transition-transform duration-500">
                  <Settings size={20} strokeWidth={1.5} />
               </div>
-<<<<<<< HEAD
               <div className="flex-1">
                 <h3 className="text-2xl text-white font-normal tracking-tight mb-3 font-heading">
                   ZY316 MOCVD 系列设备
-=======
-              <div>
-                <h3 className="text-2xl text-white font-normal tracking-tight mb-3 font-heading">
-                  ZY316 Series
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                 </h3>
                 <p className="text-sm text-stone-400 font-light leading-relaxed">
                   科研与研发试制平台。双重构型（水平行星式/垂直喷淋式），精准控制，覆盖氮化物、氧化物及SiC等多材料体系。
                 </p>
               </div>
-<<<<<<< HEAD
               <div className="pt-4 border-t border-white/10 w-full">
-=======
-              <div className="mt-auto pt-4 border-t border-white/10 w-full">
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                  {/* Dark Tech Card Button */}
                  <div className="group relative flex w-full items-center justify-center overflow-hidden rounded-full p-[1px] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_25px_rgba(255,255,255,0.1)]">
                     <span className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,transparent_75%,#ffffff_100%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
                     <span className="absolute inset-0 rounded-full bg-stone-800 transition-opacity duration-300 group-hover:opacity-0"></span>
                     <span className="relative flex h-full w-full items-center justify-center gap-2 rounded-full bg-gradient-to-b from-stone-800 to-stone-950 px-6 py-2.5 text-xs font-medium uppercase tracking-widest text-stone-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.3)] transition-colors duration-300 group-hover:text-white">
-<<<<<<< HEAD
                       查看规格 <ArrowRight size={12} />
-=======
-                      View Specs <ArrowRight size={12} />
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                     </span>
                  </div>
               </div>
@@ -190,22 +145,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           {/* Card 2: Cooperation */}
           <div 
              onClick={() => onNavigate(Page.COOPERATION)}
-<<<<<<< HEAD
              className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 p-8 md:p-10 backdrop-blur-md hover:bg-white/10 transition-all duration-500 cursor-pointer flex flex-col"
-=======
-             className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 p-8 md:p-10 backdrop-blur-md hover:bg-white/10 transition-all duration-500 cursor-pointer"
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
           >
             <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10 flex flex-col h-full gap-6">
               <div className="w-12 h-12 rounded-full bg-stone-100 text-stone-900 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-500">
                  <Users size={20} strokeWidth={1.5} />
               </div>
-<<<<<<< HEAD
               <div className="flex-1">
-=======
-              <div>
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                 <h3 className="text-2xl text-white font-normal tracking-tight mb-3 font-heading">
                   合作研发
                 </h3>
@@ -213,7 +160,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                    面向新材料与新工艺研发。提供从设备交付到中试验证的协同支持。灵活合作、工艺协同、交付运维保障。
                 </p>
               </div>
-<<<<<<< HEAD
               <div className="pt-4 border-t border-white/10 flex items-center justify-between w-full">
                 {/* Secondary Button - Updated Style (Dark Mode Context) */}
                 <div className="group flex items-center justify-between w-full">
@@ -221,16 +167,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     了解更多
                   </span>
                   <ArrowRight size={16} className="text-stone-400 group-hover:text-white transition-colors group-hover:translate-x-1" />
-=======
-              <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between">
-                {/* Secondary Button - Updated Style (Dark Mode Context) */}
-                <div className="group inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-stone-400 hover:text-white transition-colors duration-300">
-                  <span className="relative">
-                    Learn More
-                    <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full"></span>
-                  </span>
-                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                 </div>
               </div>
             </div>
@@ -258,11 +194,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Secondary Button - Updated Style */}
             <button 
               onClick={() => onNavigate(Page.ABOUT)}
-<<<<<<< HEAD
               className="mt-8 group inline-flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors duration-300"
-=======
-              className="mt-8 group inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors duration-300"
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
             >
               <span className="relative">
                 了解我们 Learn More
@@ -294,17 +226,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
          {/* Background Equipment Image (Simulated cutout) */}
          <div className="absolute top-1/2 right-0 -translate-y-1/2 h-[120%] w-[50%] md:w-[40%] pointer-events-none opacity-10 mix-blend-multiply select-none">
             <img 
-<<<<<<< HEAD
                src="/images/hero/equipment-background.webp" 
                alt="Equipment Background" 
                className="h-full w-full object-cover object-left grayscale contrast-125"
                loading="lazy"
                decoding="async"
-=======
-               src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2670&auto=format&fit=crop" 
-               alt="Equipment Background" 
-               className="h-full w-full object-cover object-left grayscale contrast-125"
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
             />
             <div className="absolute inset-0 bg-gradient-to-r from-stone-50 via-stone-50/50 to-transparent"></div>
          </div>
@@ -318,7 +244,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   </h2>
                   <p className="text-stone-500 mt-4 font-light">科研与研发试制平台</p>
                </div>
-<<<<<<< HEAD
                <div className="flex gap-5">
                   {/* Underline Link Style Button */}
                   <button 
@@ -330,21 +255,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                         <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-stone-900 transition-all duration-300 group-hover:w-full"></span>
                      </span>
                      <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-=======
-               <div className="flex gap-4">
-                  {/* REPLACED: PBLK Style Glass Button */}
-                  <button 
-                     onClick={() => onNavigate(Page.PRODUCT)} 
-                     className="hover:scale-105 duration-500 ease-out transition-all flex group text-sm font-medium text-stone-600 bg-gradient-to-b from-white/80 via-white/40 to-white/80 rounded-full px-6 py-2 relative gap-x-2 gap-y-2 items-center"
-                     style={{
-                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(209, 213, 219, 0.5)',
-                        //@ts-ignore
-                        '--border-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.9))',
-                        '--border-radius-before': '9999px'
-                     }}
-                  >
-                     设备技术详情
->>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                   </button>
 
                   {/* REPLACED: Dark Tech Card Button (Modified for light bg context, high contrast) */}

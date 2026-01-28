@@ -84,7 +84,11 @@ export const ProductPage: React.FC = () => {
 
                         {/* Product Image */}
                         <img 
+<<<<<<< HEAD
                             src="/images/products/zy316-mocvd-machine.webp"
+=======
+                            src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbWl4bN1Ua9TYS9nIGZ0--s1s46-gAAJZC2sbyYbJR5-595Z8k5AQAQADAgADdwADOAQ"
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                             alt="ZY316 MOCVD Machine"
                             decoding="async"
                             loading="eager"
@@ -201,7 +205,11 @@ export const ProductPage: React.FC = () => {
               {/* Background Image for context */}
               <div className="absolute inset-0 z-0">
                   <img 
+<<<<<<< HEAD
                     src="/images/products/performance-background.webp" 
+=======
+                    src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFbml4ci57CPuQklXF4uWm8LrVRM7tAAJbC2sbyYbJR1yBux6E8D2CAQADAgADdwADOAQ" 
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                     className="w-full h-full object-cover opacity-20 mix-blend-luminosity transform scale-100 hover:scale-105 transition-transform duration-[2000ms] ease-out-expo" 
                     alt="Tech Background"
                     loading="lazy"

@@ -2,7 +2,10 @@ import React from 'react';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
 export const ContactPage: React.FC = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
   return (
     <div className="w-full pt-20 bg-stone-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-32 grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -14,7 +17,11 @@ export const ContactPage: React.FC = () => {
           
           <div className="space-y-10 border-l border-stone-200 pl-8">
             <div className="group">
+<<<<<<< HEAD
               <h3 className="text-sm font-bold text-stone-900 mb-2 uppercase tracking-wide">公司地址</h3>
+=======
+              <h3 className="text-sm font-bold text-stone-900 mb-2 uppercase tracking-wide">研发地址</h3>
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
               <div className="flex items-start gap-3 text-stone-500 group-hover:text-brand-600 transition-colors">
                 <p className="text-sm leading-relaxed">北京市顺义区南法信HICOOL产业园二期2号楼802A</p>
               </div>
@@ -28,21 +35,33 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             <div className="group">
               <h3 className="text-sm font-bold text-stone-900 mb-2 uppercase tracking-wide">关注微信公众号</h3>
               <div className="w-24 h-24 bg-white border border-stone-200 p-2 flex items-center justify-center">
                  <img 
                    src="/images/contact/wechat-qrcode.webp" 
+=======
+            <div className="pt-8">
+              <div className="w-24 h-24 bg-white border border-stone-200 p-2 flex items-center justify-center">
+                 <img 
+                   src="https://pic.82314912.xyz/api/cfile/AgACAgEAAyEGAATEcCnBAAIFb2l4daQRI_t7cEpygMPauNLR-d0nAAJcC2sbyYbJR51RPlvk7AeSAQADAgADbQADOAQ" 
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
                    alt="公众号二维码"
                    loading="lazy"
                    decoding="async"
                    className="w-full h-full object-contain"
                  />
               </div>
+<<<<<<< HEAD
+=======
+              <span className="text-[10px] text-stone-400 mt-2 block uppercase tracking-wider">关注微信公众号</span>
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Map - 地图链接 */}
         <div className="h-[500px] w-full bg-stone-100 relative overflow-hidden border border-stone-300 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center text-center px-6">
@@ -73,6 +92,25 @@ export const ContactPage: React.FC = () => {
           <div className="absolute top-4 right-4 bg-white px-4 py-2 border border-stone-200 shadow-sm z-10">
             <p className="text-xs font-bold text-stone-900">BEIJING CASI</p>
           </div>
+=======
+        {/* Map Placeholder */}
+        <div className="h-[500px] w-full bg-stone-200 relative overflow-hidden border border-stone-300 filter grayscale contrast-125 hover:filter-none transition-all duration-700">
+           <iframe 
+             width="100%" 
+             height="100%" 
+             frameBorder="0" 
+             scrolling="no" 
+             marginHeight={0} 
+             marginWidth={0} 
+             loading="lazy"
+             referrerPolicy="no-referrer-when-downgrade"
+             src="https://maps.google.com/maps?q=Beijing%20Shunyi%20Hicool&t=&z=13&ie=UTF8&iwloc=&output=embed"
+             className="w-full h-full opacity-80"
+           ></iframe>
+           <div className="absolute top-4 right-4 bg-white px-4 py-2 border border-stone-200 shadow-sm">
+             <p className="text-xs font-bold text-stone-900">BEIJING CASI</p>
+           </div>
+>>>>>>> e4dbc0d36fb380706d58227402fd3cba3080ce5f
         </div>
 
       </div>

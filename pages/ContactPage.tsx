@@ -33,8 +33,11 @@ export const ContactPage: React.FC = () => {
                  <img 
                    src="/images/contact/wechat-qrcode.webp" 
                    alt="公众号二维码"
-                   loading="lazy"
+                   loading="eager"
+                   fetchPriority="high"
                    decoding="async"
+                   width="96"
+                   height="96"
                    className="w-full h-full object-contain"
                  />
               </div>
